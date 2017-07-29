@@ -1,0 +1,17 @@
+server:
+  port: 8780
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    registry-fetch-interval-seconds: 5
+    serviceUrl:
+      defaultZone: http://localhost:${server.port}/eureka/
+
+logging:
+  level:
+    com:
+      netflix:
+        eureka: OFF
+        discovery: OFF
