@@ -1,5 +1,5 @@
 server:
-  port: 8780
+  port: 8761
 
 eureka:
   client:
@@ -7,11 +7,11 @@ eureka:
     fetch-registry: false
     registry-fetch-interval-seconds: 5
     serviceUrl:
-      defaultZone: http://localhost:${server.port}/eureka/
+      defaultZone: http://${HOSTNAME:localhost}:${server.port}/eureka/
 
 logging:
   level:
     com:
       netflix:
         eureka: OFF
-        discovery: OFF
+        discovery: ON
