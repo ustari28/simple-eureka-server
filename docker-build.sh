@@ -1,5 +1,5 @@
 #!/bin/sh
-docker build . -t eureka-server:1.0.0
+docker build --rm . -t eureka-server:1.0.0
 echo
 echo
 echo "To run the docker container execute:"
